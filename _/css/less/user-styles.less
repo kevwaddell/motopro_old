@@ -1,0 +1,226 @@
+body#login {
+	
+	#user-wrap {	
+	width: 100%;
+	height: 100%;
+	.min-h(40);
+	.bg-img('user-bg.png');
+	.bg-repeat(no-repeat);
+	background-position: center center;
+	.bg-col(@grey30);
+	.bg-size;
+	.rel;
+	
+		@media (min-width: @screen-sm) {
+		.pad-top(0);
+		}
+	}
+	
+	.wrap-center {
+	text-align: center;	
+	.pad-all(2);
+	height: 100%;
+		&:before {
+			content: "";
+			.in-block;
+			height: 100%;
+			vertical-align: middle;
+			margin-right: -0.25em;
+		}
+	}
+		
+	.login {
+	.in-block;
+	vertical-align: middle;
+	.pad(6;2;2;2);
+	.trans-bg(white; 0.9);
+	.bg-img('motopro-logo-mobile.png');
+	.bg-repeat(no-repeat);
+	background-position: 50% 20px;
+	width: 80%;
+	.max-w(30);
+	.bg-size(85%);
+	.drop-shadow( 0, 0, 20px, 0.5); 	
+	
+		&.maintenance_active {
+			p.message {
+			.none;	
+			}
+		}
+	
+		@media (min-width: @screen-sm) {
+		.pad-top(12);
+		.max-w(40);
+		.bg-img('motopro-logo.png');
+		.bg-size(55%);
+		}
+		
+		@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+			only screen and (   min--moz-device-pixel-ratio: 1.5),
+			only screen and (     -o-min-device-pixel-ratio: 3/2),
+			only screen and (        min-device-pixel-ratio: 1.5){ 
+			.bg-img("x2/motopro-logo-mobile.png");
+			.bg-size(85%);
+				
+			@media (min-width: @screen-sm) { 
+			.bg-img("x2/motopro-logo.png");
+			.bg-size(45%);
+			background-position: 50% 20px;
+			}
+		}
+		
+		#login_error {
+		.bg-col(@red);
+		.col(white);	
+		.pad-all(0.5);
+			 p {
+				.mag-all(0); 
+			 }
+		}
+		
+		input {
+		.no-rounded;	
+		text-align: center;
+		}
+		
+		.form-control {
+		.h(3);	
+			&:focus {
+			.border-col(@red);	
+			}
+		}
+		
+		p.submit {
+		.rel;
+			&:after {
+			.abs;
+			.top(0.3);
+			.left(0);	
+			font-family: FontAwesome;
+			.h(4);
+			.w(4);
+			font-size: 1.3em;
+			.col(@greyDk);
+			}
+			
+			input.btn {
+			.no-rounded;
+			.bg-col(@grey);
+			.col(white);
+			.caps;
+			.border-col(@greyDk);	
+				
+				&:hover, &:active, &:focus {
+				.bg-col(@grey50);
+				}
+			}
+			
+			&.login-btn {
+			
+				&:after {
+				content: "\f023";	
+				}	
+			}
+			
+			&.new-pass-btn {
+			
+				&:after {
+				content: "\f084";	
+				}	
+			}
+		}
+	
+		.tml-action-links {
+		.mag-all(0);
+		.pad-all(0);
+		list-style: none;
+		
+			li {
+			.mag-bot(1);	
+			}
+		
+			a {
+			.block;
+			.h(3);
+			.line-h(3);
+			.col(black);
+			text-align: center;
+			.no-rounded;
+			.no-text-dec;
+			.border(@greyDk, 0.1);
+			.caps;
+			.font-size(1.4);
+				&:hover, &:active, &:focus {
+				.bg-col(@grey);
+				.col(white);
+				}	
+			}
+		}
+	}
+	
+}
+
+.user-links {
+.fixed;
+.bottom(0);	
+.w(20);
+.transition(0.2s, ease-in-out);
+
+	#user-btn {
+	.abs;
+	.right(-4);
+	.bottom(0);
+	.w(4);
+	.h(4);
+	.no-border;
+	.no-rounded;
+	.bg-col(@red);
+	.col(white);
+		&:hover, &:active, &:focus {
+		.col(@greyDk);	
+		}
+	}
+
+	&.open {
+	.left(0);	
+		#user-btn {
+		.col(@greyDk);
+			&:hover, &:active, &:focus {
+			.col(white);
+			}
+		}
+	}
+	
+	&.closed {
+	.left(-20);	
+	}
+
+	ul {
+	padding-left: 0;
+	list-style: none;
+	.mag-bot(0);
+	.bg-col(@red);
+	.pad-all(1);
+	
+		li {
+		.mag-bot(.1);
+		.mag-top(.1);	
+		}
+	
+		a {
+		.block;
+		.w(18);
+		.h(3);
+		.line-h(3);
+		.bg-col(@greyDk);
+		.col(white);
+		text-align: center;
+		.no-text-dec;
+			&:hover, &:active, &:focus {
+			.col(@greyDk);
+			.bg-col(@grey30);	
+			}
+		}	
+	}
+	
+}

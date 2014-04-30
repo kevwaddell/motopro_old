@@ -1,0 +1,13 @@
+/*
+Theme Name: MotoPro
+Description: MotoPro website Theme
+Author: Kevin Waddell
+Author URI: http://www.tlwsolicitors.co.uk
+Template: TLW-Base-Template
+Version: 1.0
+*/
+
+@import "../TLW-Base-Template/style.css";
+
+/* SHOP STYLES */
+@import "_/css/styles.css";
