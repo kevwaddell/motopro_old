@@ -66,6 +66,14 @@
 	-webkit-font-smoothing: subpixel-antialiased;
 	-moz-osx-font-smoothing: subpixel-antialiased;
 	
+		a {
+		.col(@grey);
+			&:hover, &:active, &:focus {
+			.col(@red);	
+			text-decoration: underline;
+			}
+		}
+	
 		@media (min-width: @screen-sm) {
 			&.copyright {
 			.block;
@@ -179,14 +187,6 @@
 			text-align: left;	
 			.pad-right(0);
 			.pad-left(3);
-			
-				a {
-				.col(@grey);
-					&:hover, &:active, &:focus {
-					.col(@red);	
-					text-decoration: underline;
-					}
-				}
 			}
 		}
 		
