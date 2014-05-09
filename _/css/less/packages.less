@@ -1,9 +1,11 @@
 #home-packages {
 .border(@grey, 0.2);
 .pad(2;1;0;1);
+.mag-bot(2);
 
 	@media (min-width: @screen-sm) {
 	.pad(2;1;0;2);
+	.mag-bot(0);
 	}
 	
 	@media (min-width: @screen-md) {
@@ -48,7 +50,7 @@
 	.block;
 	.no-text-dec;
 	.pad-all(1);
-	.mag-bot(1);
+	.mag-bot(1.5);
 	.rel;
 	.transition(0.5s, ease-in-out);
 	
@@ -76,10 +78,10 @@
 		.block;
 		.abs;
 		.left(.5);
-		.top(.5);
-		.h(3);
-		.w(3);
-		.pad-all(.4);
+		.top(-0.5);
+		.h(5);
+		.w(5);
+		.pad-all(.7);
 		.bg-col(@greyDker);
 		.rounded(88px);
 		
@@ -131,7 +133,7 @@
 		.block;			
 		.font-size(1.8);
 		.line-h(2);
-		.indent(3);
+		.indent(5);
 		.font-lite;
 		
 			@media (min-width: @screen-sm) {
