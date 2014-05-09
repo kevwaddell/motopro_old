@@ -28,6 +28,8 @@
 	
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/_/img/favicon.ico">
 	
+		<title>MotoPro | Admin</title>
+	
 	<?php wp_head(); ?>
 	
 </head>
