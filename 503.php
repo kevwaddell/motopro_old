@@ -69,10 +69,11 @@
 				
 				<div class="btn-box">
 					<h3><span>For More Information</span></h3>
+					<?php $freephone_num = get_field('freephone_num', 'option');?>
 					<?php if (wp_is_mobile()) { ?>
-					<a href="tel:0123 456 789" class="info-btn link" title="Email MotoPro"><i class="fa fa-phone"></i>Freephone: 0123 456 789</a>
+					<a href="tel:<?php echo $freephone_num; ?>" class="info-btn link" title="Email MotoPro"><i class="fa fa-phone"></i>Freephone: <?php echo $freephone_num; ?></a>
 					<?php } else { ?>
-					<div class="info-btn tel"><i class="fa fa-phone"></i>Freephone: 0123 456 789</div>
+					<div class="info-btn tel"><i class="fa fa-phone"></i>Freephone: <?php echo $freephone_num; ?></div>
 					<?php } ?>
 					<a href="mailto:info@motoprolegal.co.uk" class="info-btn link" title="Email MotoPro"><i class="fa fa-envelope"></i>info@motoprolegal.co.uk</a>
 				</div>

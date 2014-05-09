@@ -644,6 +644,8 @@ z-index: 10;
 	color: white;
 	padding: 20px 0 20px 0; 
 	border-top: 5px solid @grey;
+	overflow: visible;
+	z-index: 12;
 	
 		span {
 		display: block;	
@@ -679,13 +681,10 @@ z-index: 10;
 	height: 20px;
 	width: 42px;
 	margin-left: -21px;
-	background-image: url("img/footer-icon.png");
+	.bg-img("footer-icon.png");
 	background-repeat: no-repeat;
 	background-position: center top;	
-	-webkit-background-size: contain;
-	-moz-background-size: contain;
-	-o-background-size: contain;
-	background-size:  contain;	
+	.bg-size('contain');
 	
 		@media (min-width: @screen-sm) {
 		top: -30px;

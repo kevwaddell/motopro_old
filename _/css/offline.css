@@ -798,6 +798,8 @@ a:focus {
   color: white;
   padding: 20px 0 20px 0;
   border-top: 5px solid #a1a4a7;
+  overflow: visible;
+  z-index: 12;
 }
 #footer span {
   display: block;
@@ -830,7 +832,7 @@ a:focus {
   height: 20px;
   width: 42px;
   margin-left: -21px;
-  background-image: url("img/footer-icon.png");
+  background-image: url(img/footer-icon.png);
   background-repeat: no-repeat;
   background-position: center top;
   -webkit-background-size: contain;
