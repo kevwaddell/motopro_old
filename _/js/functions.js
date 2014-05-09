@@ -49,8 +49,6 @@
 	
 	$('body').on(event_type,'button#nav-btn', function(e){
 	
-	console.log(event_type);
-	
 		if ( $('#main-nav').hasClass('nav-closed') ) {
 			$(this).removeClass('in-active').addClass('active');
 			$('.nav-closed').removeClass('nav-closed').addClass('nav-open');
@@ -95,8 +93,6 @@
 	
 	/* SIDE MENU FUNCTIONS */
 	$('button#sidenav-btn').on(event_type, function(e){
-	
-	console.log(event_type);
    	 	
    	 	if ($('ul.btn-list').hasClass('btns-closed')) {
    	 	

@@ -15,15 +15,7 @@
 	<meta name="description" content="<?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>" />
 <?php if (wp_is_mobile()) { ?>
 	<meta name="viewport" content="user-scalable=1.0,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<meta name="format-detection" content="telephone=yes">
-		   
-	<link rel="apple-touch-icon" href="<?php bloginfo('template_directory'); ?>/_/img/touch-icon-iphone.png" /> 
-	<link rel="apple-touch-icon" sizes="76x76" href="<?php bloginfo('template_directory'); ?>/_/img/touch-icon-ipad.png" /> 
-	<link rel="apple-touch-icon" sizes="120x120" href="<?php bloginfo('template_directory'); ?>/_/img/touch-icon-iphone-retina.png" />
-	<link rel="apple-touch-icon" sizes="152x152" href="<?php bloginfo('template_directory'); ?>/_/img/touch-icon-ipad-retina.png" />
-	<link rel="apple-touch-startup-image" href="<?php bloginfo('template_directory'); ?>/_/img/apple-start-up-img.png">
+	<meta name="format-detection" content="telephone=yes">	   
 <?php } ?>
 
 <link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/_/img/favicon.ico">
@@ -46,11 +38,28 @@
 			
 			<h1><span><?php bloginfo('name'); ?></span></h1>
 			
-			<span class="slogan">Keeping You<br>on the Road</span>
-			
 			<a href="/login/" class="login-link" title="Login">Login</a>
 			
 		</div>
+		
+		<section id="home-slider">
+			<div class="banner-img-wrap">
+			
+				<span class="slider-item active">
+					<div id="slider-img-1" class="slider-img"></div>
+				</span>
+				<span class="slider-item next">
+					<div id="slider-img-2" class="slider-img"></div>
+				</span>
+				<span class="slider-item">
+					<div id="slider-img-3" class="slider-img"></div>
+				</span>
+				<span class="slider-item prev">
+					<div id="slider-img-4" class="slider-img"></div>
+				</span>
+		
+			</div>
+		</section>
 	
 		<div id="content">
 			<div class="container">
@@ -81,6 +90,8 @@
 	</div>
 	
 	<?php wp_footer(); ?>
+	
+	<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/_/js/offline-functions.js?ver=1.0.1"></script>
 	
 </body>
 </html>

@@ -1,61 +1,11 @@
-/* COLORS */
-@white: #FFFFFF;
-@black: #333333;
-@grey: #a1a4a7;
-@grey50: #d0d2d2;
-@grey30: #e2e3e4;
-@greyDk: #4b565c;
-@greyDk50: #a4a9ad;
-@greyDker: #242a2c;
-@red: #ea5777;
+/* --------------------------- */
+/* Mixins and vars */
+/* --------------------------- */
+@import url('elements.less');
 
-/* EXTRA COLORS */
-@green: #157b80;
-@blue: #0082c7;
-@orange: #e8841e;
+@import url('vars.less');
 
-
-/* SCREEN SIZES */
-@screen-xs: 480px;
-@screen-xs-port: 390px;
-@screen-sm: 768px;
-@screen-md: 992px;
-@screen-lg: 1200px;
-
-/* FONTS */
-@font-face {
-    font-family: 'open_sanslight';
-    src: url('fonts/OpenSans-Light-webfont.eot');
-    src: url('fonts/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/OpenSans-Light-webfont.woff') format('woff'),
-         url('fonts/OpenSans-Light-webfont.ttf') format('truetype'),
-         url('fonts/OpenSans-Light-webfont.svg#open_sanslight') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@lite-font: "HelveticaNeue-Light", "Helvetica Neue Light", 'open_sanslight', "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-@lite-font-italic: "HelveticaNeue-LightItalic", "Helvetica Neue Light Italic", 'open_sanslight', "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-@reg-font: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-
-.font-lite {
-font-family: @lite-font;
-font-weight: 300; 
-font-stretch: normal;	
-}
-
-.font-lite-italic {
-font-family: @lite-font-italic;
-font-weight: 300; 
-font-stretch: normal;	
-font-style: italic;
-}
-
-.font-normal {
-font-family: @reg-font;
-font-weight: normal; 
-font-stretch: normal;	
-}
+@import url('mixins.less');
 
 * {
 -webkit-box-sizing: border-box;
@@ -109,147 +59,81 @@ height: 100%;
 }
 
 #header {
-height: 275px;
-background-color: @greyDker;
-background-repeat: no-repeat;
-background-position: center bottom;
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size:  cover;	
-background-image: url("img/banner-offline-250h.jpg?v=1");
-
-	span.slogan {
-	display: block;
-	text-align: center;
-	text-transform: uppercase;
-	padding-top: 80px;
-	font-size: 30px;
-	line-height: 28px;
-	color: @greyDk;
-	.font-lite-italic;
-	}
-
-	@media
-	only screen and (-webkit-min-device-pixel-ratio: 1.5),
-	only screen and (   min--moz-device-pixel-ratio: 1.5),
-	only screen and (     -o-min-device-pixel-ratio: 3/2),
-	only screen and (        min-device-pixel-ratio: 1.5){ 
-	background-image: url("img/x2/banner-offline-250h.jpg?v=1");
-	}
-
-	@media (max-width : @screen-xs-port) {
-	height: 250px;
-	background-image: url("img/banner-offline-280h.jpg?v=1");
-			
-			@media
-			only screen and (-webkit-min-device-pixel-ratio: 1.5),
-			only screen and (   min--moz-device-pixel-ratio: 1.5),
-			only screen and (     -o-min-device-pixel-ratio: 3/2),
-			only screen and (        min-device-pixel-ratio: 1.5){ 
-			background-image: url("img/x2/banner-offline-280h.jpg?v=2");
-			}
-			
-		span.slogan {
-		padding-top: 60px;
-		font-size: 20px;
-		line-height: 18px;
-		}
-
-	}
+.h(3);
+.bg-col(@greyDk);
+.rel;
+z-index: 10;
+.border-bot(white;0.3);
 	
 	@media (min-width: @screen-sm) {
-	height: 380px;
-	background-image: url("img/banner-offline-400h.jpg?v=2");
-		span.slogan {
-		padding-top: 110px;
-		font-size: 40px;
-		line-height: 38px;
-		}
-	}
-	
-	@media (min-width: @screen-md) {
-	height: 450px;
-	background-image: url("img/banner-offline-470h.jpg?v=1");
-	
-		span.slogan {
-		padding-top: 130px;
-		font-size: 60px;
-		line-height: 58px;
-		}
+	.h(4.5);
 	}
 	
 	@media (min-width: @screen-lg) {
-	height: 580px;
-	background-image: url("img/banner-offline-600h.jpg?v=3");
-	
-		span.slogan {
-		padding-top: 160px;
-		font-size: 70px;
-		line-height: 68px;
-		}
+	.h(6.3);
 	}
 	
 	h1 {
-	padding-top: 10px;
-	padding-bottom: 10px;
-	text-indent: -9999px;
-	background-color: white;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	margin-left: 20px;
-	margin-right: 20px;
-	position: relative;
+	.pad-top(1);
+	.pad-bot(1);
+	.txt-gone;
+	.bg-col(white);
+	.mag-top(0);
+	.mag-bot(0);
+	.mag-left(2);
+	.mag-right(2);
+	.rel;
 	
 		span {
-		display: block;
-		height: 30px;
+		.block;
+		.h(3);
 		background-repeat: no-repeat;
 		background-position: center center;
-		background-image: url("img/motopro-logo-mobile.png");
-		-webkit-background-size: contain;
-		-moz-background-size: contain;
-		-o-background-size: contain;
-		background-size:  contain;		
+		.bg-img("motopro-logo-mobile.png");
+		.bg-size('contain');	
 		
 			@media
-			only screen and (-webkit-min-device-pixel-ratio: 1.5),
-			only screen and (   min--moz-device-pixel-ratio: 1.5),
-			only screen and (     -o-min-device-pixel-ratio: 3/2),
-			only screen and (        min-device-pixel-ratio: 1.5){ 
-			background-image: url("img/x2/motopro-logo-mobile.png");
+			only screen and (-webkit-min-device-pixel-ratio: 2),
+			only screen and (   min--moz-device-pixel-ratio: 2),
+			only screen and (     -o-min-device-pixel-ratio: 2),
+			only screen and (        min-device-pixel-ratio: 2),
+			only screen and (      	 min-resolution: 192dpi),
+			only screen and (       min-resolution: 2dppx){ 
+			.bg-img("x2/motopro-logo-mobile.png");
 			}
 			
 			@media (min-width: @screen-sm) {
-			background-image: url("img/motopro-logo.png");
-			height: 80px;
+			.bg-img("motopro-logo.png");
+			.h(8);
 			
 				@media
-				only screen and (-webkit-min-device-pixel-ratio: 1.5),
-				only screen and (   min--moz-device-pixel-ratio: 1.5),
-				only screen and (     -o-min-device-pixel-ratio: 3/2),
-				only screen and (        min-device-pixel-ratio: 1.5){ 
-				background-image: url("img/x2/motopro-logo.png");
+				only screen and (-webkit-min-device-pixel-ratio: 2),
+				only screen and (   min--moz-device-pixel-ratio: 2),
+				only screen and (     -o-min-device-pixel-ratio: 2),
+				only screen and (        min-device-pixel-ratio: 2),
+				only screen and (      	 min-resolution: 192dpi),
+				only screen and (       min-resolution: 2dppx){ 
+				.bg-img("x2/motopro-logo.png");
 				}
 			}
 			
 			@media (min-width: @screen-md) {
-			height: 80px;
+			.h(8);
 			}
 			
 			@media (min-width: @screen-lg) {
-			height: 120px;	
+			.h(12);
 			}
 		}
 			
 		@media (min-width: @screen-sm) {
-		width: 250px;
+		.w(25);
 		margin-left: auto;
 	    margin-right: auto;
 		}
 		
 		@media (min-width: @screen-lg) { 
-		width: 350px;
+		.w(35);
 		}
 			
 	}	
@@ -257,28 +141,31 @@ background-image: url("img/banner-offline-250h.jpg?v=1");
 	a.login-link {
 	display: none;
 	position: absolute;	
-	top: 45px;
+	top: 0px;
 	right: 0px;
 	width: 100px;
 	height: 30px;
 	line-height: 30px;
-	background-color: rgba(255,255,255,0.7);
+	background-color: white;
 	color: @red;
 	opacity: 0.0;
 	z-index: 100;
 	text-decoration: none;
 	text-align: center;
 	
+		@media (min-width: @screen-md) { 
+		display: block;
+		height: 45px;
+		line-height: 45px;
+		}
+	
 		@media (min-width: @screen-lg) {
-		top: 60px;
+		height: 60px;
+		line-height: 60px;
 		}
 	
 		&:hover, &:active, &:focus {
 		opacity: 1.0;	
-		}
-	
-		@media (min-width: @screen-md) { 
-		display: block;
 		}
 	}
 	
@@ -331,6 +218,198 @@ background-image: url("img/banner-offline-250h.jpg?v=1");
 
 }
 
+#home-slider {
+
+	.banner-img-wrap {
+	.h(24.5);	
+	.over-hide;
+	.bg-col(@white);
+	.rel;
+		
+		//Large banner image mobile retina
+		@media (max-width : @screen-xs-port) {
+		.h(18);
+		}
+		
+		//Large banner image large mobile portrait tablet
+		@media (min-width: @screen-sm) {
+		.h(31.6);
+		}
+		
+		//Large banner image tablet landscape small desktop
+		@media (min-width: @screen-md) {
+		.h(41.2);
+		}
+		
+		//Large banner image desktop
+		@media (min-width: @screen-lg) {
+		.h(50);
+		}	
+		
+	}
+	
+	.slider-item {
+	
+		@sc-width: 100%;
+		@sc-halfed: @sc-width/2;
+		
+		.abs;
+		width: 100%;
+		left: 50%;
+		.top(0);
+		.bottom(0);
+		background-color: @green;	
+		//.transition(0.5s, ease-in-out);
+		.opacity(0.0);
+		.block;
+		
+		&.active ,&.next, &.prev {
+		left: 50%;	
+		.opacity(1);
+		}
+		
+		&.active {
+		z-index: 2;
+		}
+		
+		&.next, &.prev {
+		z-index: 1;
+		}
+		
+		&.active {
+		margin-left: ~"-@{sc-halfed}";
+		}
+		
+		&.next {
+		margin-left: ~"@{sc-halfed}";	
+		}
+		
+		&.prev {
+		margin-left: ~"-@{sc-width}";	
+		}
+		
+		
+		@media (min-width: @screen-sm) {
+		.w(72);
+		@sc-width: 720;
+		@sc-halfed: @sc-width/2;
+		@sc-plus-halfed: @sc-width + @sc-halfed;
+		margin-left: ~"@{sc-width}px"; 
+		
+			&.active {
+			margin-left: ~"-@{sc-halfed}px";
+			.border-left(white, 0.3);
+			.border-right(white, 0.3);
+			}
+			
+			&.next {
+			margin-left: ~"@{sc-halfed}px";	
+			}
+			
+			&.prev {
+			margin-left: ~"-@{sc-plus-halfed}px";	
+			}		
+		}
+		
+		@media (min-width: @screen-md) {
+		.w(94);
+		@sc-width: 940;
+		@sc-halfed: @sc-width/2;
+		@sc-plus-halfed: @sc-width + @sc-halfed;
+		margin-left: ~"@{sc-width}px"; 
+			
+			&.active {
+			margin-left: ~"-@{sc-halfed}px";
+			}
+			
+			&.next {
+			margin-left: ~"@{sc-halfed}px";	
+			}
+			
+			&.prev {
+			margin-left: ~"-@{sc-plus-halfed}px";	
+			}		
+		}
+	
+			
+		@media (min-width: @screen-lg) {
+		.w(114);
+		@sc-width: 1140;
+		@sc-halfed: @sc-width/2;
+		@sc-plus-halfed: @sc-width + @sc-halfed;
+		margin-left: ~"@{sc-width}px"; 
+		
+			&.active {
+			margin-left: ~"-@{sc-halfed}px";
+			}
+			
+			&.next {
+			margin-left: ~"@{sc-halfed}px";	
+			}
+			
+			&.prev {
+			margin-left: ~"-@{sc-plus-halfed}px";	
+			}
+		}
+		
+		
+		.slider-img {
+		width: 100%;
+		height: 100%;
+		.bg-col(white);
+		background-position: center center;
+		background-repeat: no-repeat;
+		.bg-size;
+			
+			&#slider-img-1 {
+			.bg-img("slider-offline-img-1.jpg");	
+			}	
+			
+			&#slider-img-2 {
+			.bg-img("slider-offline-img-2.jpg?v=2");	
+			}	
+			
+			&#slider-img-3 {
+			.bg-img("slider-offline-img-3.jpg");	
+			}	
+			
+			&#slider-img-4 {
+			.bg-img("slider-offline-img-4.jpg");	
+			}
+			
+			@media
+			only screen and (-webkit-min-device-pixel-ratio: 2),
+			only screen and (   min--moz-device-pixel-ratio: 2),
+			only screen and (     -o-min-device-pixel-ratio: 2),
+			only screen and (        min-device-pixel-ratio: 2),
+			only screen and (      	 min-resolution: 192dpi),
+			only screen and (       min-resolution: 2dppx){ 
+				
+				&#slider-img-1 {
+				.bg-img("x2/slider-offline-img-1.jpg");	
+				}	
+				
+				&#slider-img-2 {
+				.bg-img("x2/slider-offline-img-2.jpg");	
+				}	
+				
+				&#slider-img-3 {
+				.bg-img("x2/slider-offline-img-3.jpg");	
+				}	
+				
+				&#slider-img-4 {
+				.bg-img("x2/slider-offline-img-4.jpg");	
+				}
+				
+			}
+				
+		}
+	}
+	
+	
+}
+
+
 :before, :after {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -367,7 +446,9 @@ background-image: url("img/banner-offline-250h.jpg?v=1");
 }
 
 #content {
-background-color: white;	
+background-color: white;
+.rel;
+z-index: 10;	
 
 	.intro {
 	padding: 10px 20px 0px 20px;	
