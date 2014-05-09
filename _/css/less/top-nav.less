@@ -5,6 +5,9 @@ width: 100%;
 .max-w(25);
 height: 100%;
 .bg-col(@greyDker);
+.bg-img('nav-bg-shadow.png');
+background-repeat: repeat-y;
+background-position: left top;
 .transition(0.5s, ease-in-out);
 transition-property: right;
 .pad(0;0;3;0);
@@ -115,6 +118,7 @@ transition-property: right;
 	
 	//Medium screen styles
 	@media (min-width: @screen-md) {
+	background-image: none;
 	.rel;
 	.bg-col(transparent);
 	width: auto;

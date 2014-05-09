@@ -1,10 +1,19 @@
-<section class="banner-img">
-	<div class="banner-img-lg">
+<section id="home-slider" class="banner-img">
+	<div class="banner-img-wrap">
 	
-	<div class="container">
-		<div class="banner-tag text-center">Keeping you<br>on the road</div>	
-	</div>
-		
+		<span class="slider-item active">
+			<div id="slider-img-1" class="slider-img"></div>
+		</span>
+		<span class="slider-item next">
+			<div id="slider-img-2" class="slider-img"></div>
+		</span>
+		<span class="slider-item">
+			<div id="slider-img-3" class="slider-img"></div>
+		</span>
+		<span class="slider-item prev">
+			<div id="slider-img-4" class="slider-img"></div>
+		</span>
+
 	</div>
 	<div class="banner-strip">
 		<div class="strip strip-green"></div>

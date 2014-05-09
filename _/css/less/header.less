@@ -54,9 +54,11 @@ section.top-bar {
 				}
 			
 				@media (min-width: @screen-md) { 
+				.rel;
 				.mag-top(-2.5);
 				.mag-bot(-2.5);
 				width: 100%;
+				z-index: 10;
 				}
 				
 				@media (min-width: @screen-lg) { 
@@ -73,14 +75,6 @@ section.top-bar {
 				background-position: left center;
 				.bg-size(contain);
 				
-				@media
-				only screen and (-webkit-min-device-pixel-ratio: 1.5),
-				only screen and (   min--moz-device-pixel-ratio: 1.5),
-				only screen and (     -o-min-device-pixel-ratio: 3/2),
-				only screen and (        min-device-pixel-ratio: 1.5){ 
-				.bg-img("x2/motopro-logo-mobile.png");
-				}
-				
 					&:hover, &:active, &:focus {
 					.opacity(0.5);	
 					}
@@ -90,18 +84,24 @@ section.top-bar {
 					.h(7.5);	
 					width: 100%;
 					background-position: center center;	
-					
-						@media
-						only screen and (-webkit-min-device-pixel-ratio: 1.5),
-						only screen and (   min--moz-device-pixel-ratio: 1.5),
-						only screen and (     -o-min-device-pixel-ratio: 3/2),
-						only screen and (        min-device-pixel-ratio: 1.5){ 
-						.bg-img("x2/motopro-logo.png");
-						}
 					}
 					
 					@media (min-width: @screen-lg) {
 					.h(12);		
+					}
+					
+					@media
+					only screen and (-webkit-min-device-pixel-ratio: 2),
+					only screen and (   min--moz-device-pixel-ratio: 2),
+					only screen and (     -o-min-device-pixel-ratio: 2),
+					only screen and (        min-device-pixel-ratio: 2),
+					only screen and (      	 min-resolution: 192dpi),
+					only screen and (       min-resolution: 2dppx){  
+					.bg-img("x2/motopro-logo-mobile.png");
+					
+						@media (min-width: @screen-md) {
+						.bg-img("x2/motopro-logo.png");
+						}
 					}
 				}	
 				
@@ -118,6 +118,10 @@ section.top-bar {
 			.bg-col(@grey50);
 			.pad-all(0);
 			.col(@greyDk);
+			
+				@media (min-width: @screen-sm) {
+				.right(2);
+				}
 			}
 
 	}

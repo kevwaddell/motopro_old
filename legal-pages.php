@@ -26,7 +26,7 @@ $children = get_pages($children_args);
 ?>	
 
 <!-- Banner small  -->
-<?php include (STYLESHEETPATH . '/_/inc/global/banner-sml.php'); ?>
+<?php include (STYLESHEETPATH . '/_/inc/global/banner-strip.php'); ?>
 
 <!-- Container  -->
 <div class="container">

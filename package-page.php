@@ -6,15 +6,18 @@ Template Name: Package page template
 
 <?php get_header(); ?>
 
+<?php include (STYLESHEETPATH . '/_/inc/packages/single-package-vars.php'); ?>
+
+<?php if (has_post_thumbnail()) { ?>
 <!-- Banner small  -->
 <?php include (STYLESHEETPATH . '/_/inc/global/banner-sml.php'); ?>
+
+<?php }  ?>
 
 <!-- Container  -->
 <div class="container">
 
 <?php if ( have_posts() ): while ( have_posts() ) : the_post(); ?>	
-
-<?php include (STYLESHEETPATH . '/_/inc/packages/single-package-vars.php'); ?>
 	
 	<article <?php post_class('package-intro'); ?>>
 		<div class="package-icon col-<?php echo $color; ?>"><div class="icon-inner"></div></div>

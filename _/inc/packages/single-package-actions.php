@@ -2,7 +2,7 @@
 	
 	<div class="row">
 		<div class="col-md-6">
-			<a href="<?php echo get_permalink($contact_page->ID); ?>?package=<?php echo $post->post_title; ?>" class="link-btn icon-btn col-<?php echo $color; ?>"><i class="fa fa-phone fa-lg"></i>Request a Callback</a>
+			<a href="<?php echo get_permalink($contact_page->ID); ?>?package=<?php echo $package_name; ?>#callback-request" class="link-btn icon-btn col-<?php echo $color; ?>"><i class="fa fa-phone fa-lg"></i>Request a Callback</a>
 		</div>
 		
 		<div class="col-md-6">

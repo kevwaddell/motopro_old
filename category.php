@@ -14,7 +14,7 @@
 	
 	<article <?php post_class(); ?>>
 		<h2><?php echo $news_page->post_title; ?></h2>
-		<?php echo $news_page_content ; ?>
+		<?php echo $news_page_content; ?>
 	</article>
 		
 	<?php get_sidebar(); ?>
@@ -24,7 +24,7 @@
 
 <?php if ( have_posts() ): ?>	
 
-	<h3 class="icon-header hidden-xs hidden-sm"><i class="fa fa-rss fa-lg"></i> Latest News</h3>
+	<h3 class="icon-header hidden-xs hidden-sm"><i class="fa fa-rss fa-lg"></i> <?php single_cat_title(); ?></h3>
 	
 	<section class="posts-list">
 	
@@ -58,7 +58,7 @@
 	<?php else: ?>
 		<div class="well">
 			<h3>Sorry</h3>
-			<p>No <?php bloginfo('name'); ?> News at the moment.<br>
+			<p>There is no news in category <?php single_cat_title(); ?> at the moment.<br>
 			Please come back soon.
 			</p>
 		</div>

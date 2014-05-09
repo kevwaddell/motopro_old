@@ -1,0 +1,66 @@
+.no-script-wrap {
+.fixed;
+.top(0);
+.left(0);
+.bottom(0);
+.right(0);
+.bg-col(@greyDk);
+z-index: 1000;
+
+	.no-script-inner-wrap {
+		text-align: center;	
+		.pad-all(2);
+		height: 100%;
+		
+		&:before {
+			content: "";
+			.in-block;
+			height: 100%;
+			vertical-align: middle;
+			margin-right: -0.25em;
+		}
+	}
+
+	.no-script-inner {
+	.in-block;
+	vertical-align: middle;
+	width: 80%;
+	.max-w(30);
+	.border(@red, 0.5);
+	.drop-shadow(0, 0, 20px, 0.7);
+	.bg-col(white);
+	.bg-img('motopro-logo.png');
+	.bg-repeat(no-repeat);
+	.bg-size('80%');
+	background-position: center 20px;
+	.pad-all(2);
+	
+		@media (min-width: @screen-md) {
+		.bg-size('50%');
+		.max-w(50);
+		}
+	
+		h3 {
+		.col(@red);
+		text-align: center;
+		.mag-top(11);	
+		.font-normal;
+		}
+		
+		p {
+		text-align: center;
+		.bold;
+		.mag-bot(3);	
+		}
+		
+		a.btn {
+		.no-border;
+		.no-rounded;
+		.bg-col(@red);
+		.col(white);
+			&:hover, &:active, &:focus {
+			.bg-col(@grey);	
+			}	
+		}
+	}
+}

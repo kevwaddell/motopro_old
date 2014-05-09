@@ -6,6 +6,65 @@
 	}	
 }
 
+button.icon-header {
+	.font-size(1.6);
+	.line-h(4);	
+	.h(4);	
+	.bg-col(@greyDk);
+	.col(@grey);
+	.mag-bot(1);
+	width: 100%;
+	.block;
+	.no-border;
+	.rounded(0px);
+	.pad-all(0);
+	.normal;
+	-webkit-font-smoothing: subpixel-antialiased;
+	
+	@media (min-width: @screen-sm) {
+		&:after {
+		.block;
+		content: "\f068";
+		font-family: FontAwesome;
+		.w(4);
+		.h(4);
+		.fright;
+		font-size: 1.3em;
+		.col(@grey50);
+		}
+	}
+	
+	
+	i {
+	.line-h(4);	
+	text-align: center;
+	.col(@grey50);
+	.fleft;
+	.w(4);
+		    
+	}//icons
+	
+	&:hover, &:active, &:focus {
+	.col(white);
+	}
+	
+	&.collapsed {
+	.bg-col(@grey);
+	.col(@greyDk);	
+		&:after {
+		content: "\f067";
+		}
+		
+		&:hover, &:active, &:focus {
+		.bg-col(@greyDk);	
+		.col(@grey);
+		}
+		
+	}
+	
+}
+
+
 button#sidenav-btn {
 .block;
 .no-border;
@@ -288,4 +347,38 @@ ul.btn-list {
 			}
 		}
 	}
+}
+
+button.icon-btn {
+.block;
+width: 100%;
+.bg-col(@grey);
+.col(@greyDk);
+.h(4);
+.line-h(4);
+.pad(0;0;0;1);
+.mag-top(1);
+.no-text-dec;
+.no-rounded;
+.no-border;
+text-align: left;
+
+	@media (min-width: @screen-sm) {
+	.mag-top(2);
+	}
+
+	i {
+	.block;
+	.w(4);
+	.h(4);
+	text-align: center;
+	.line-h(4);
+	.fright;	
+	.bg-col(@greyDk);
+	.col(@grey);
+	}
+	
+	&:hover, &:active, &:focus {
+	.bg-col(@grey50);	
+	}	
 }

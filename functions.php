@@ -29,7 +29,24 @@ if ( function_exists( 'register_nav_menus' ) ) {
 		);
 }
 
-add_theme_support( 'post-thumbnails', array( 'post' ) );
+if ( function_exists( 'register_sidebar' ) ) {
+	
+	$login_sb_args = array(
+	'name'          => "User actions",
+	'id'            => "user-actions",
+	'description'   => 'Area for logged in user widget',
+	'class'         => 'user-links',
+	'before_widget' => '',
+	'after_widget'  => '',
+	'before_title'  => '',
+	'after_title'   => '' 
+	);
+
+	register_sidebar( $login_sb_args );
+}
+
+
+add_theme_support( 'post-thumbnails', array( 'post', 'page' ) );
  
 /*  PACKAGE OPTIONS CPT */
 include (STYLESHEETPATH . '/_/functions/package-options-cpt.php');

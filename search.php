@@ -8,7 +8,7 @@ $search_query = get_search_query();
 //echo '<pre>';print_r($posts);echo '</pre>';
 ?><!-- Banner small  -->
 
-<?php include (STYLESHEETPATH . '/_/inc/global/banner-sml.php'); ?>
+<?php include (STYLESHEETPATH . '/_/inc/global/banner-strip.php'); ?>
 
 <!-- Container  -->
 <div class="container">

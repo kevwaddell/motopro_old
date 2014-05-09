@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <!-- Banner small  -->
-<?php include (STYLESHEETPATH . '/_/inc/global/banner-sml.php'); ?>
+<?php include (STYLESHEETPATH . '/_/inc/global/banner-strip.php'); ?>
 
 <!-- Container  -->
 <div class="container">
@@ -21,6 +21,22 @@ $gallery_imgs = get_field('gallery_imgs');
 			<article <?php post_class(); ?>>
 			
 				<time class="date" datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><i class="fa fa-calendar fa-lg"></i> <?php echo $date; ?></time>
+				
+				<?php if (has_post_thumbnail() && empty($gallery_imgs)) { 
+				$feat_img_id = get_post_thumbnail_id($post->ID);
+				$thumb_img = wp_get_attachment_image_src( $feat_img_id, 'gallery-img');
+				$large_img = wp_get_attachment_image_src( $feat_img_id, 'medium');
+				?>
+				
+				<div class="feat-img-thumb visible-xs visible-sm">
+					
+					<a href="<?php echo $large_img[0]; ?>" rel="fancybox" class="zoomable">
+						<img src="<?php echo $thumb_img[0]; ?>" class="img-responsive" width="<?php echo $thumb_img[1]; ?>" height="<?php echo $thumb_img[2]; ?>">
+					</a>
+					
+				</div>
+				
+				<?php }  ?>
 				
 				<h2 style="margin-top: 0px;"><?php the_title(); ?></h2>
 				

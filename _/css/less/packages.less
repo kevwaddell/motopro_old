@@ -777,15 +777,17 @@ section.package-options {
 }
 
 .package-icon {
-.w(8);
-.h(8);
+.rel;
+.w(6);
+.h(6);
 .bg-col(@greyDker);
 .rounded(88px);
-.pad-all(1);
-.mag-top(-8);
+.pad-all(0.7);
+.mag-top(-6.5);
 .mag-bot(1);
 margin-left: auto;
 margin-right: auto;
+z-index: 10;
 	.icon-inner {
 	width: 100%;
 	height: 100%;	
@@ -797,13 +799,16 @@ margin-right: auto;
 	}
 	
 	@media (min-width: @screen-sm) {
-	.w(12);
-	.h(12);
-	.pad-all(1.5);
-	.mag-top(-10.5);
+	.w(10);
+	.h(10);
+	.pad-all(1.2);
+	.mag-top(-9.5);
 	}
 	
 	@media (min-width: @screen-md) {
+	.w(12);
+	.h(12);
+	.pad-all(1.5);
 	.mag-top(-11.5);
 	}
 	

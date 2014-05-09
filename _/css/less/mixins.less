@@ -117,14 +117,28 @@ background-image: ~"url(img/@{imgSrc})";
 
 .bg-img-x2(@img){
 @imgSrc: @img;
-background-image: ~"url(img/@{imgSrc})";
+.bg-img(@imgSrc);
 
 	@media
 	only screen and (-webkit-min-device-pixel-ratio: 1.5),
 	only screen and (   min--moz-device-pixel-ratio: 1.5),
 	only screen and (     -o-min-device-pixel-ratio: 3/2),
 	only screen and (        min-device-pixel-ratio: 1.5){ 
-	background-image: ~"url(img/x2/@{imgSrc})";
+	.bg-img("x2/@{imgSrc}");
+	}
+}
+
+.bg-img-x2-contain(@img){
+@imgSrc: @img;
+.bg-img(@imgSrc);
+
+	@media
+	only screen and (-webkit-min-device-pixel-ratio: 1.5),
+	only screen and (   min--moz-device-pixel-ratio: 1.5),
+	only screen and (     -o-min-device-pixel-ratio: 3/2),
+	only screen and (        min-device-pixel-ratio: 1.5){ 
+	.bg-img("x2/@{imgSrc}");
+	.bg-size('contain');
 	}
 }
 

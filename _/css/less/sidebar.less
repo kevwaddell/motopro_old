@@ -4,4 +4,72 @@ aside.sidebar {
 	.mag-bot(2);	
 	}
 	
+	.sidebar-block-inner {
+	.pad-top(1);
+	.pad-bot(2);
+	
+		h4.address-head {
+		.font-size(2);
+		.font-normal;	
+		}
+	}
+	
+	#control {
+		 
+		 label {
+		.normal;
+		.col(@grey);	 
+		 }	
+		
+		input {
+		.no-rounded;
+		.border-col(@grey);
+			&:focus {
+			.drop-shadow(0,0, 5px, 0.5);
+			}
+		}
+		
+		
+	}
+	
+	ul.contact-list {
+	.mag-bot(2);
+	
+		@media (min-width: @screen-sm) {
+		.mag-bot(3);
+		}
+		
+		@media (min-width: @screen-md) {
+		.mag-bot(0);
+		}
+	
+		li {
+		.line-h(4);	
+		text-align: center;
+		.h(4);
+		.bg-col(@grey);
+		.col(@greyDk);
+		.mag-bot(1);
+		-webkit-font-smoothing: subpixel-antialiased;
+		.pad-right(4);
+			
+			i {
+			.line-h(4);	
+			.w(4);
+			text-align: center;
+			.fleft;
+			.col(@grey50);
+			}
+			
+			a {
+			.col(@greyDk);
+			.no-text-dec;
+				&:hover, &:active, &:focus {
+				.col(@red);	
+				}	
+			}
+
+		}
+	}
+	
 }

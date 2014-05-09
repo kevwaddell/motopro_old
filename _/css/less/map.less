@@ -1,0 +1,148 @@
+#location-map {
+	.over-hide;
+	.rel;
+	.bg-col(white);	
+		
+	&.directions-closed {
+		
+		button.close-btn {
+		.bottom(-3);
+		}
+		
+		#directions-panel-wrap {
+		.none;	
+		}
+	}
+	
+	&.directions-open {
+	
+		button.close-btn {
+		.bottom(0);
+		}
+		
+		#directions-panel-wrap {
+		.block;	
+		}
+	}
+		
+	&:focus {
+	outline: none;
+	}
+	
+	#map-canvas {
+	.h(22);
+	width: 100%;
+	
+		@media (min-width: @screen-sm) {
+		.h(32);
+		}
+		
+		@media (min-width: @screen-md) {
+		.h(37);
+		}
+		
+		@media (min-width: @screen-lg) {
+		.h(42);
+		}
+	}
+	
+	#directions-panel-wrap {
+	.rel;
+	.h(33);	
+	.mag-top(3);
+	}
+	
+	.panel-head {
+	.h(4);
+	.bg-col(@greyDk);
+	.col(white);
+	.font-size(1.6);
+	.line-h(4);
+	.font-normal;
+	-webkit-font-smoothing: subpixel-antialiased;
+		i {
+		.block;
+		.h(4);
+		.w(4);
+		.fleft;	
+		.line-h(4);
+		.align-center;
+		}
+	}
+	
+	#directions-panel {
+	.h(30);	
+	.bg-col(@grey50);
+	.pad(2;2;2;4);
+	overflow-y: auto;
+	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+		.adp-placemark {
+		.mag-top(0);
+		font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+		.normal;
+			td.adp-text {
+			text-align: center;	
+			}	
+			
+			img.adp-marker {
+				.mag-all(.5);
+			}
+		}
+		
+		.adp-summary {
+		.col(@greyDk);	
+		font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+		.normal;
+		}
+		
+		.adp-directions {
+			font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+			.normal;
+			width: 100%;
+			.col(@greyDk);	
+		}
+		
+		.adp-legal {
+			.none;
+		}
+	}
+	
+	button.close-btn {
+	.abs;
+	.left(0);
+	.no-border;
+	.no-rounded;
+	.h(3);
+	.w(3);
+	.bg-col(white);
+	.col(@grey);
+	.pad-all(0);
+	text-align: center;
+	.line-h(3);	
+		&:hover, &:active, &:focus {
+			.col(@red);
+		}
+		
+	}
+}
+
+.intro {
+.normal;
+.pad-top(2);
+.pad-bot(2);
+.font-size(1.6);
+.col(@grey);
+
+	p {
+	.mag-bot(0);	
+	}
+	
+	@media (min-width: @screen-md) {
+	.font-size(1.8);
+	}	
+	
+	@media (min-width: @screen-lg) {
+	.font-size(2);
+	}
+}
