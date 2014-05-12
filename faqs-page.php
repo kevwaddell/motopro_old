@@ -29,8 +29,8 @@ $faqs_args = array(
 );
 $faqs = get_posts($faqs_args);
 //echo '<pre>';print_r($faqs);echo '</pre>';
-$related_qs = [];
-$related_qs_none = [];
+$related_qs = array();
+$related_qs_none = array();
 
 if ($faqs) {
 
@@ -152,7 +152,7 @@ ksort($related_qs);
 			<?php if (!empty($sb_links)) { ?>
 				
 			<?php foreach ($sb_links as $link) { ?>
-			<a href="<?php echo get_permalink($link[page]->ID); ?>" class="link-btn icon-btn"><?php if (!empty($link[icon])) { ?><i class="fa <?php echo $link[icon]; ?> fa-lg"></i><?php } ?><?php echo $link[page]->post_title; ?></a>
+			<a href="<?php echo get_permalink($link[page]->ID); ?><?php echo ($link[page]->ID == $contact_page->ID) ? '#callback-request':''; ?>" class="link-btn icon-btn"><?php if (!empty($link[icon])) { ?><i class="fa <?php echo $link[icon]; ?> fa-lg"></i><?php } ?><?php echo $link[page]->post_title; ?></a>
 			<?php } ?>
 				
 			<?php }  ?>
