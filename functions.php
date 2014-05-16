@@ -2,17 +2,17 @@
 if ( !function_exists(core_mods) ) {
 	function core_mods() {
 		if ( !is_admin() ) {
-			wp_register_style( 'styles', get_stylesheet_uri(), null, filemtime( get_stylesheet_directory().'/style.css' ) );
+			wp_register_style( 'styles', get_stylesheet_directory_uri().'/_/css/styles.css', null, filemtime( get_stylesheet_directory().'/_/css/styles.css' ) );
 			wp_register_style( 'font-awesome', "//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css", null );
 			wp_register_script( 'slim-scroll', get_stylesheet_directory_uri() . '/_/js/jquery.slimscroll.min.js', array('jquery'), '1.0.0', true );
-			wp_register_script( 'bootstrap-tabs', get_stylesheet_directory_uri() . '/_/js/bootstrap-tabs.js', array('jquery','jquery-ui-core'), '1.0.0', true );
-			wp_register_script( 'functions', get_stylesheet_directory_uri() . '/_/js/functions.js', array('jquery', 'jquery-ui-core', 'bootstrap-all-min', 'slim-scroll', 'bootstrap-tabs'), '1.0.1', true );
+			//wp_register_script( 'bootstrap-tabs', get_stylesheet_directory_uri() . '/_/js/bootstrap-tabs.js', array('jquery','jquery-ui-core'), '1.0.0', true );
+			wp_register_script( 'functions', get_stylesheet_directory_uri() . '/_/js/functions-min.js', array('jquery', 'jquery-ui-core', 'bootstrap-all-min', 'slim-scroll'), '1.0.1', true );
 			//wp_register_script( 'img-fit', get_stylesheet_directory_uri() . '/_/js/jquery.imagefit.js', array('jquery'), '1.0.0', true );
 			
 			wp_enqueue_style('font-awesome');
 			wp_enqueue_style('styles');
 			wp_enqueue_script('slim-scroll');
-			wp_enqueue_script('bootstrap-tabs');
+			//wp_enqueue_script('bootstrap-tabs');
 			wp_enqueue_script('functions');
 			//wp_enqueue_script('img-fit');
 		}
