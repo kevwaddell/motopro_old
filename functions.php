@@ -57,4 +57,7 @@ include (STYLESHEETPATH . '/_/functions/faq-cpt.php');
 /* AFC SAVE POST FUNCTION */
 include (STYLESHEETPATH . '/_/functions/afc_save_post.php');
 
+/* SEND NEWSLETTER TO DOTMAILER */
+include (STYLESHEETPATH . '/_/functions/submit_newsletter.php');
+
  ?>

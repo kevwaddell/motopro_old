@@ -255,6 +255,52 @@ a.link-btn {
 	}
 }
 
+a.link-btn-sml {
+.block;
+.h(4);
+.line-h(4);
+.align-center;
+.bg-col(@grey);
+.col(@greyDk);
+.caps;
+.no-text-dec;
+
+	&:after {
+	.block;
+	content: "\f105";
+	font-family: FontAwesome;
+	.w(4);
+	.h(4);
+	.fright;
+	font-size: 1.3em;
+	}
+	
+	&.icon-btn {
+		
+		i {
+		.block;
+		.fleft;
+		.w(4);
+		.h(4);	
+		.line-h(4);
+		.bg-col(@greyDk);
+		.col(@grey);
+		}	
+	}
+	
+	&:hover, &:active, &:focus {
+	.bg-col(@greyDk);	
+	.col(@grey);
+		
+		&.icon-btn {
+			i {
+			.bg-col(@grey);
+			.col(@greyDk);
+			}
+		}
+	}
+}
+
 .side-action-btns {
 .mag-bot(0);
 	
