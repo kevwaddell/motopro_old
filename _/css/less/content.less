@@ -72,8 +72,20 @@ section.content {
 		.entry-txt {
 
 			&.col-span-2 {
+			.mag-bot(4);
 				@media (min-width: @screen-md) {
+				.mag-bot(3);
 				.columns(auto, 2, 30px, transparent);
+				 -webkit-column-fill:balance;
+				 -moz-column-fill:balance;
+				 column-fill:balance;
+				 
+					p {
+					-webkit-column-break-inside: avoid;
+					-moz-column-break-inside: avoid;
+					column-break-inside: avoid;
+					.in-block;	
+					}
 				}
 			}
 	
