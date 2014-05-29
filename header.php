@@ -6,7 +6,7 @@
 <!--[if IE 9 ]>    <html class="ie ie9 no-js" <?php language_attributes(); ?>> <![endif]-->
 <!--[if gt IE 9]><!--><html class="no-js" <?php language_attributes(); ?>><!--<![endif]-->
 <!-- the "no-js" class is for Modernizr. -->
-<head id="www-wordpress-test-dev" data-template-set="tlw-base-theme" profile="http://gmpg.org/xfn/11">
+<head id="www-motoprolegal-co-uk" data-template-set="motopro-theme">
 
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<?php header('X-UA-Compatible: IE=edge,chrome=1'); ?>
@@ -71,12 +71,12 @@
 				
 					<div class="col-md-3 col-lg-4">
 				
-						<div id="logo">
+						<h1 id="logo">
 							<a href="<?php echo get_option('home'); ?>/" class="text-hide">
 							<?php bloginfo('name'); ?> - 
 							<?php bloginfo('description'); ?>
 							</a>			
-						</div>
+						</h1>
 						
 						<button id="nav-btn" class="visible-xs visible-sm in-active"><i class="fa fa-bars fa-lg"></i><span class="sr-only">Navigation</span></button>
 					
@@ -115,4 +115,4 @@
 	<!-- TOP BAR END -->
 	
 	<!-- MAIN CONTENT START -->
-	<section class="content">
+	<div class="content">

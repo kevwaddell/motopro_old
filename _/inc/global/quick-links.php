@@ -2,7 +2,7 @@
 $contact_page = get_page_by_title("Request a Callback");
  ?>
 
-<section id="quick-links">
+<div id="quick-links">
 
 	<div class="row">
 		<div class="col-md-6">
@@ -13,4 +13,4 @@ $contact_page = get_page_by_title("Request a Callback");
 		</div>
 	</div>
 	
-</section>
+</div>

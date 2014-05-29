@@ -1,9 +1,9 @@
 
-		</section>
+		</div>
 		<!-- MAIN CONTENT END -->
 		
 		<!-- FOOTER START -->
-		<section class="footer-info">
+		<div class="footer-info">
 		
 		<div class="footer-icon"></div>
 		
@@ -70,7 +70,7 @@
 				</div>
 			</footer>
 			
-		</section>
+		</div>
 		
 		</div>
 		<!-- wrapper end -->
