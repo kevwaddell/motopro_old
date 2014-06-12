@@ -13,8 +13,12 @@
 		<article <?php post_class($classes); ?>>
 			<h2 class="with-span text-center"><?php bloginfo('name'); ?> <span><?php the_title(); ?></span></h2>
 			
-			<div class="entry-txt col-span-2">
-				<?php the_content(); ?>
+			<div class="entry-txt with-borders">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+						<?php the_content(); ?>
+					</div>
+				</div>
 			</div>
 		</article>
 		
