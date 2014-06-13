@@ -21,7 +21,7 @@
 			
 			<?php if ($fee_guilty || $fee_not_guilty) { ?>
 		
-			<div class="fee-box">Fee: <?php echo ($fee_guilty) ? "Guilty &pound;".$fee_guilty:""; ?><?php echo ($fee_guilty&&$fee_not_guilty) ? "<span>|</span>":""; ?><?php echo ($fee_not_guilty) ? "Not Guilty &pound;".$fee_not_guilty:""; ?></div>
+			<div class="fee-box"><?php echo ($fee_guilty) ? "Guilty Plea &pound;".$fee_guilty:""; ?><?php echo ($fee_guilty&&$fee_not_guilty) ? "<span>|</span>":""; ?><?php echo ($fee_not_guilty) ? "Not Guilty Plea &pound;".$fee_not_guilty:""; ?></div>
 	
 	<?php } ?>
 		
