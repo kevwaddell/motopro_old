@@ -25,7 +25,7 @@ add_action( 'wp_print_styles', 'my_deregister_styles', 100 );
 function my_deregister_styles() {
 		//wp_deregister_style( 'font-awesome-four' );
 		wp_deregister_style( 'theme-my-login' );
-		wp_deregister_style( 'abc_style' );
+		/* wp_deregister_style( 'abc_style' ); */
 		wp_deregister_style( 'cookielawinfo-style' );
 		wp_deregister_style( 'wprssmi_template_styles' );
 		wp_deregister_style( 'fancybox' );
