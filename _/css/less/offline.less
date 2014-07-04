@@ -485,6 +485,26 @@ z-index: 10;
 		color: @grey;
 		line-height: 1.4em;	
 		}
+		
+		h3 {
+		font-size: 16px;
+		text-align: center;
+		.bg-col(@red);
+		color: white;
+		.caps;
+		.line-h(2.6);
+		
+			@media (min-width: @screen-sm) {
+			font-size: 25px;
+			.line-h(3.5);
+			margin-bottom: 0px;
+			}
+			
+			@media (min-width: @screen-lg) {
+			font-size: 30px;
+			.line-h(4);
+			}
+		}
 	}	
 	
 	.btn-box {

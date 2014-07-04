@@ -11,7 +11,7 @@
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<?php header('X-UA-Compatible: IE=edge,chrome=1'); ?>
 	
-	<title><?php bloginfo('name'); ?> &rsaquo; <?php echo $this->g_opt['mamo_pagetitle']; ?></title>
+	<title><?php bloginfo('name'); ?> | <?php echo $this->g_opt['mamo_pagetitle']; ?></title>
 	<meta name="description" content="<?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>" />
 <?php if (wp_is_mobile()) { ?>
 	<meta name="viewport" content="user-scalable=1.0,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
@@ -69,11 +69,14 @@
 				
 				<div class="btn-box">
 					<h3><span>For More Information</span></h3>
-					<?php $freephone_num = get_field('freephone_num', 'option');?>
+					<?php 
+					$freephone_num = get_field('freephone_num', 'option');
+					$office_num = "0191 293 1500";	
+					?>
 					<?php if (wp_is_mobile()) { ?>
 					<a href="tel:<?php echo $freephone_num; ?>" class="info-btn link" title="Email MotoPro"><i class="fa fa-phone"></i>Freephone: <?php echo $freephone_num; ?></a>
 					<?php } else { ?>
-					<div class="info-btn tel"><i class="fa fa-phone"></i>Freephone: <?php echo $freephone_num; ?></div>
+					<div class="info-btn tel"><i class="fa fa-phone"></i>Tel: <?php echo $office_num; ?></div>
 					<?php } ?>
 					<a href="mailto:info@motoprolegal.co.uk" class="info-btn link" title="Email MotoPro"><i class="fa fa-envelope"></i>info@motoprolegal.co.uk</a>
 				</div>
