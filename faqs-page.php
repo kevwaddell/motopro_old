@@ -82,8 +82,10 @@ ksort($related_qs);
 				
 			<?php }  ?>
 			
-			<?php if ($brochure_link) { ?>
-			<a href="#" class="link-btn icon-btn"><i class="fa fa-download fa-lg"></i>Download our Brochure</a>
+			<?php if ($brochure_link) { 
+			$brochure_download = get_field('global_brochure_download', 'option');	
+			?>
+			<a href="<?php echo $brochure_download; ?>" target="_blank" class="link-btn icon-btn"><i class="fa fa-download fa-lg"></i>Download our Brochure</a>
 			<?php }  ?>
 
 		</div>

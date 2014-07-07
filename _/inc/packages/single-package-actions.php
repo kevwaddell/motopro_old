@@ -1,3 +1,8 @@
+<?php
+$brochure_download = get_field('brochure_download');
+//echo '<pre>';print_r($brochure_download);echo '</pre>';
+ ?>
+
 <aside class="actions">
 	
 	<div class="row">
@@ -6,7 +11,7 @@
 		</div>
 		
 		<div class="col-md-6">
-			<a href="#" class="link-btn icon-btn col-<?php echo $color; ?>"><i class="fa fa-download fa-lg"></i>Download our Brochure</a>
+			<a href="<?php echo $brochure_download; ?>" target="_blank" class="link-btn icon-btn col-<?php echo $color; ?>"><i class="fa fa-download fa-lg"></i>Download our Brochure</a>
 		</div>
 	</div>
 
