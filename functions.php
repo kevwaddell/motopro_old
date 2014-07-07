@@ -74,4 +74,18 @@ include (STYLESHEETPATH . '/_/functions/afc_save_post.php');
 /* SEND NEWSLETTER TO DOTMAILER */
 include (STYLESHEETPATH . '/_/functions/submit_newsletter.php');
 
+function add_gf_cap()
+{	
+   $id = 2;
+   $role = new WP_User( $id );
+   $role->add_cap( 'gravityforms_edit_forms' );
+   $role->add_cap( 'gravityforms_view_entries' );
+   $role->add_cap( 'gravityforms_edit_entries' );
+   $role->add_cap( 'gravityforms_export_entries' );
+   $role->add_cap( 'gravityforms_view_entry_notes' );
+   $role->add_cap( 'gravityforms_edit_entry_notes' );
+}
+ 
+add_action( 'admin_init', 'add_gf_cap' );
+
  ?>
