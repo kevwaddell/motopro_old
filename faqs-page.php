@@ -38,16 +38,19 @@ if ($faqs) {
 	$q = get_field('faq_question', $f->ID);
 	$a = get_field('faq_answer', $f->ID);
 	$related = get_field('related', $f->ID);
+	//echo '<pre>';print_r($related);echo '</pre>';
 	
 		if (!empty($related)) {
 		
 			foreach ($related as $r) {
+				$pg = get_post($r);
 				//$related_qs[$r] = array($q, $a);
+				//echo '<pre>';print_r($pg);echo '</pre>';
 				
-				if (!array_key_exists($r, $related_qs)) {
-					$related_qs[$r] = array(array('q' => $q, 'a' => $a));
+				if (!array_key_exists($pg->menu_order, $related_qs)) {
+					$related_qs[$pg->menu_order] = array(array('q' => $q, 'a' => $a, 'id' => $r));
 				} else {
-					array_push($related_qs[$r], array('q' => $q, 'a' => $a));
+					array_push($related_qs[$pg->menu_order], array('q' => $q, 'a' => $a, 'id' => $r));
 				}
 			
 			}
@@ -57,12 +60,12 @@ if ($faqs) {
 		}
 		
 	}
-	
 }
 
 ksort($related_qs);
 
-//echo '<pre>';print_r($related_qs_none);echo '</pre>';
+
+//echo '<pre>';print_r($related_qs);echo '</pre>';
  ?>	
 
 	<div class="col-md-5 col-lg-4">
@@ -129,8 +132,8 @@ ksort($related_qs);
 
 			<?php foreach ($related_qs as $key => $val) { 
 			//echo '<pre>';print_r($key);echo '</pre>';
-			$rel_page = get_page($key);
-			//echo '<pre>';print_r($val);echo '</pre>';
+			$rel_page = get_page($val[0]['id']);
+			//echo '<pre>';print_r($val[0]['id']);echo '</pre>';
 			?>
 			
 				<div class="faq-panel panel">
