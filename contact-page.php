@@ -69,7 +69,7 @@ $map_marker = get_stylesheet_directory_uri()."/_/img/map-marker.png";
 			<ul class="contact-list list-unstyled">
 				
 				<?php if (isset($office_tel)) { ?>
-				<li><i class="fa fa-phone fa-lg"></i> Office Tel: <?php echo $office_tel; ?></li>
+				<li><i class="fa fa-phone fa-lg"></i> Freephone: <?php echo $office_tel; ?></li>
 				<?php } ?>
 				
 				<?php if (isset($fax)) { ?>

@@ -76,7 +76,7 @@
 					<?php if (wp_is_mobile()) { ?>
 					<a href="tel:<?php echo $freephone_num; ?>" class="info-btn link" title="Email MotoPro"><i class="fa fa-phone"></i>Freephone: <?php echo $freephone_num; ?></a>
 					<?php } else { ?>
-					<div class="info-btn tel"><i class="fa fa-phone"></i>Tel: <?php echo $office_num; ?></div>
+					<div class="info-btn tel"><i class="fa fa-phone"></i>Freephone: <?php echo $freephone_num; ?></div>
 					<?php } ?>
 					<a href="mailto:info@motoprolegal.co.uk" class="info-btn link" title="Email MotoPro"><i class="fa fa-envelope"></i>info@motoprolegal.co.uk</a>
 				</div>
