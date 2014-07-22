@@ -19,6 +19,10 @@
 			
 			</ul>
 			
+			<?php if ($post->post_name == "motopro-executive" || $post->post_name == "motopro-ultimate") { ?>
+			<small>*Meeting location requests may be declined if it is felt the location may pose a risk to the health and safety of the MP employee or agent.</small>
+			<?php } ?>
+			
 			<?php if ($fee_guilty || $fee_not_guilty) { ?>
 		
 			<div class="fee-box"><?php echo ($fee_guilty) ? "Guilty Plea &pound;".$fee_guilty:""; ?><?php echo ($fee_guilty&&$fee_not_guilty) ? "<span>|</span>":""; ?><?php echo ($fee_not_guilty) ? "Not Guilty Plea &pound;".$fee_not_guilty:""; ?></div>
