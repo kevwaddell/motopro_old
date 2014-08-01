@@ -55,6 +55,9 @@ body {
 .txt-gone {
   text-indent: -9999px;
 }
+.col-grey {
+  color: #a1a4a7;
+}
 .caps {
   text-transform: uppercase;
 }

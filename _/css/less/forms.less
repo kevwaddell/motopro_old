@@ -281,3 +281,38 @@ max-width: 100% !important;
 	.mag-bot(0) !important;
 	}
 }
+
+form.protected-post-form {
+margin-left: auto;
+margin-right: auto;
+.mag-bot(2);
+.bg-col(@grey50);
+.pad-all(2);
+
+	@media (min-width: @screen-md) {
+	width: 50%;
+	}
+	
+	p {
+	.mag-bot(0);	
+		&.note {
+		.mag-bot(1);	
+		}
+	}
+	
+	.btn {
+	.mag-auto;
+	width: 100%;
+	.no-border;
+	.no-rounded;
+	.bg-col(@greyDk);
+	.col(white);
+	.h(4);	
+	.pad-all(0);
+	.caps;
+	
+		&:hover, &:active, &:focus {
+		.bg-col(@red);	
+		}
+	}
+}
