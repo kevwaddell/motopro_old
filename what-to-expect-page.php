@@ -21,6 +21,8 @@ $key_length = get_post_meta( $post->ID, 'courtroom_key', true );
 $keys = get_field( 'courtroom_key');
 $courtroom_layout = get_field('courtroom_img');
 $password_message = get_field('password_message');
+$flip_book_id = get_field('flip_book_id');
+
 /* echo '<pre>';print_r(the_post_thumbnail( 'feat-img-no-crop' ));echo '</pre>'; */
  ?>
 	<?php if ( post_password_required() ) : ?>
@@ -43,6 +45,11 @@ $password_message = get_field('password_message');
 			<article <?php post_class(); ?>>
 				<h2><?php the_title(); ?></h2>
 				<?php the_content(); ?>
+				
+				<?php if (!empty($flip_book_id) && !wp_is_mobile()) { ?>
+					<?php echo do_shortcode("[book id='".$flip_book_id."' /]"); ?>
+				<?php } ?>
+				
 			</article>
 			
 		</div>

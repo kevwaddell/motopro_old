@@ -86,8 +86,8 @@
 		<div id="footer">
 		<div class="footer-icon"></div>
 			<div class="container">
-				<span>&copy; 2014 <a href="http://www.tlwsolicitors.co.uk" title="Go to TLW Solicitors website" target="">TLW Solicitors</a>. <br>All rights reserved.</span>
-				<span class="standards">Authorised and regulated by the <br><a href="http://www.sra.org.uk/" target="_blank" title="Got to Solicitors Regulation Authority website">Solicitors Regulation Authority.</a></span>
+				<span>&copy; 2014 MotoPro. All rights reserved. <br>MotoPro is a trading style of <a href="http://www.tlwsolicitors.co.uk" title="Go to TLW Solicitors website" target="">TLW LLP</a></span>
+				<span class="standards">Authorised and regulated by the <br><a href="http://www.sra.org.uk/" target="_blank" title="Got to Solicitors Regulation Authority website">Solicitors Regulation Authority</a></span>
 			</div>
 		</div>
 

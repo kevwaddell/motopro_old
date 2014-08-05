@@ -12,7 +12,7 @@
 		
 		<div id="twitter-feed" class="feed-panel tab-pane fade in active">
 			<div class="feed-wrap">
-			<?php echo do_shortcode('[wp_rss_multi_importer category="1"]'); ?>
+			<?php echo do_shortcode('[wp_rss_multi_importer category="2"]'); ?>
 				
 			</div>
 
@@ -20,7 +20,7 @@
 		
 		<div id="facebook-feed" class="feed-panel tab-pane fade">
 			<div class="feed-wrap">
-			<?php echo do_shortcode('[wp_rss_multi_importer category="2"]'); ?>
+			<?php echo do_shortcode('[wp_rss_multi_importer category="1"]'); ?>
 				
 			</div>
 

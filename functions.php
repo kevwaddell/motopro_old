@@ -106,7 +106,7 @@ add_filter('the_title', 'the_title_trim');
 add_filter( 'the_password_form', 'custom_password_form' );
 function custom_password_form() {
     global $post;
-    $o = '<form class="protected-post-form" action="' . get_option('siteurl') . '/wp-pass.php" method="post"><div class="form-group"><input name="post_password" type="password" class="form-control text-center" size="20" /></div><input type="submit" name="Submit" class="btn btn-default btn-block" value="' . esc_attr__( "Submit" ) . '" /></form>
+    $o = '<form class="protected-post-form" action="' . get_option('siteurl') . '/login/?action=postpass" method="post"><div class="form-group"><input name="post_password" type="password" class="form-control text-center" size="20" /></div><input type="submit" name="Submit" class="btn btn-default btn-block" value="' . esc_attr__( "Submit" ) . '" /></form>
     ';
     return $o;
 }

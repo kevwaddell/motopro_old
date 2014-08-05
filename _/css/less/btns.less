@@ -6,6 +6,60 @@
 	}	
 }
 
+span.pageflip_popup_link {
+	a {
+	.block;
+	.no-border;
+	.h(4);
+	.line-h(4);
+	.bg-col(@grey);
+	.col(@greyDk);
+	.caps;	
+	.font-lite;	
+	.no-text-dec;
+	.mag-bot(1);
+	text-align: center;
+			&:before {
+			.block;
+			content: "\f06e";
+			font-family: FontAwesome;
+			.w(4);
+			.h(4);
+			.fleft;
+			font-size: 1.3em;
+			.bg-col(@greyDk);
+			text-align: center;
+			.col(@grey);
+			.mag-right(1);
+			}	
+		@media (min-width: @screen-sm) {
+			&:after {
+			.block;
+			content: "\f105";
+			font-family: FontAwesome;
+			.w(4);
+			.h(4);
+			text-align: center;
+			.fright;
+			font-size: 1.3em;
+			}
+		}
+		
+		@media (min-width: @screen-md) {
+		.mag-bot(0);
+		}
+		
+		&:hover, &:active, &:focus {
+		.bg-col(@greyDk);
+		.col(@grey);
+			&:before {
+			.bg-col(@grey);
+			.col(@greyDk);
+			}	
+		}
+	}
+}
+
 button.icon-header {
 	.font-size(1.6);
 	.line-h(4);	

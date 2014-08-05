@@ -492,12 +492,19 @@ z-index: 10;
 		.bg-col(@red);
 		color: white;
 		.caps;
-		.line-h(2.6);
+		.pad-top(0.5);
+		.pad-bot(0.5);
+		.line-h(1.8);
 		
 			@media (min-width: @screen-sm) {
+			.pad-top(0);
+			.pad-bot(0);
 			font-size: 25px;
 			.line-h(3.5);
 			margin-bottom: 0px;
+				br {
+				display: none;
+				}
 			}
 			
 			@media (min-width: @screen-lg) {
