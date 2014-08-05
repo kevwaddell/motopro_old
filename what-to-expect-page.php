@@ -71,7 +71,9 @@ $flip_book_id = get_field('flip_book_id');
 				<a href="<?php echo $booklet_download; ?>" target="_blank" class="link-btn icon-btn"><i class="fa fa-download fa-lg"></i>Download Booklet</a>
 				<?php }  ?>
 				
+				<?php if (!empty($brochure_download)) { ?>
 				<a href="<?php echo $brochure_download; ?>" target="_blank" class="link-btn icon-btn"><i class="fa fa-dashboard fa-lg"></i>Packages Brochure</a>
+				<?php }  ?>
 				
 				<?php if ($key_length > 0) { ?>
 				<a href="#courtroom-layout-modal" class="link-btn icon-btn" data-toggle="modal" data-target="#courtroom-layout-modal"><i class="fa fa-photo fa-lg"></i>Courtroom Layout</a>

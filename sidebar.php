@@ -32,7 +32,7 @@ $topics = wp_list_categories($topics_args);
 	<?php }  ?>
 </ul>
 
-<?php include (STYLESHEETPATH . '/_/inc/sidebar/social-feed.php'); ?>
+<?php //include (STYLESHEETPATH . '/_/inc/sidebar/social-feed.php'); ?>
 	
 
 </aside>
