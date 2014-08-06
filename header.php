@@ -61,7 +61,7 @@
 				<div class="container">
 					<?php $freephone_num = get_field('freephone_num', 'option');?>
 					<?php if (isset($freephone_num)) { ?>
-					<span>Freephone:</span> <?php echo $freephone_num; ?>
+					<span>Freephone:</span> <a href="tel:<?php echo str_replace(' ', '', $freephone_num); ?>" onclick="_gaq.push(['_trackEvent', 'Lead', 'ClickToCall']);" title="Call us now"><?php echo $freephone_num; ?></a>
 					<?php }  ?>
 				</div>
 			</div>
