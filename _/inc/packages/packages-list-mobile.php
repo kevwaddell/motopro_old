@@ -21,5 +21,9 @@
 	
 	</div>
 	<?php } ?>
+	
+	<div class="message">
+		<small>*Meeting location requests may be declined if it is felt the location may pose a risk to the health and safety of the MotoPro employee or agent.</small>
+	</div>
 
 </div>

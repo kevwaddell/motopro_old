@@ -99,7 +99,7 @@ echo '</pre>';
 	</tbody>
 	<tfoot>
 		<tr>
-			<td class="table-info"><small>*Meeting location requests may be declined if it is felt the location may pose a risk to the health and safety of the MP employee or agent.</small></td>
+			<td class="table-info"><small>*Meeting location requests may be declined if it is felt the location may pose a risk to the health and safety of the MotoPro employee or agent.</small></td>
 			<?php foreach ($packages as $package) { 
 			$color = get_field('colour', $package->ID);
 			?>
