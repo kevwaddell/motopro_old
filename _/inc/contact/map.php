@@ -1,4 +1,6 @@
-<section id="location-map" class="directions-closed">
+<section id="location-map" class="directions-closed bottom-map">
+<h3 class="icon-header" style="margin-bottom: 0px; margin-right: 0px;">Location<i class="fa fa-compass fa-lg"></i></h3>
+
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 <script>
 	var TLW_MAP_ID = 'TLW_style';
@@ -78,6 +80,11 @@
 		  marker.setMap(null);
 	      wrap.className = "directions-open";
 	      $('html,body').animate({scrollTop: $("#directions-panel-wrap").offset().top},'slow');
+	      
+	      $('#directions-panel').slimScroll({
+			   height: '300px',
+			   alwaysVisible: true
+		  });
 	    }
 	  });
 	};
@@ -90,18 +97,11 @@
 	
 </script>
 	<div id="map-canvas"></div>
-	
-	<div class="banner-stripes no-mag">
-		<div class="strip strip-green"></div>
-		<div class="strip strip-blue"></div>
-	</div>
 
-	<div class="container">
-		<div id="directions-panel-wrap" class="hidden-xs">
-			<div class="panel-head"><i class="fa fa-map-marker fa-lg"></i> Your directions</div>
-			<div id="directions-panel"></div>
-			<button class="close-btn hidden-xs" onclick="reset_map();"><span class="glyphicon glyphicon-remove"></span></a>
-		</div>
+	<div id="directions-panel-wrap" class="hidden-xs">
+		<div class="panel-head"><i class="fa fa-map-marker fa-lg"></i> Your directions</div>
+		<div id="directions-panel"></div>
+		<button class="close-btn hidden-xs" onclick="reset_map();"><span class="glyphicon glyphicon-remove"></span></a>
 	</div>
 	
 </section>

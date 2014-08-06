@@ -238,6 +238,28 @@ a.link-btn {
 		}
 	}
 	
+	&.col-red {
+		
+		.bg-col(@red);
+		.col(white);
+		
+	
+		i {
+		.bg-col(darken(@red, 20%));
+		.col(@red);
+		}	
+		
+		&:hover, &:active, &:focus {
+			.bg-col(darken(@red, 20%));	
+		
+			i {
+			.bg-col(@red);
+			.col(darken(@red, 20%));
+			}
+		}
+		
+	}
+	
 	&.col-green {
 		
 		.bg-col(@green50);

@@ -7,6 +7,9 @@ Template Name: Contact us page template
 
 <?php get_header(); ?>
 
+<!-- Banner small  -->
+<?php include (STYLESHEETPATH . '/_/inc/global/banner-strip.php'); ?>
+
 <?php if ( have_posts() ): while ( have_posts() ) : the_post(); ?>	
 <?php 
 $form = get_field('form');
@@ -18,12 +21,6 @@ $address = get_field('address');
 $map_marker = get_stylesheet_directory_uri()."/_/img/map-marker.png";
 //echo '<pre>';print_r($form);echo '</pre>';
  ?>	
- 
-<?php if ($location) { ?>
-
-<?php include (STYLESHEETPATH . '/_/inc/contact/map.php'); ?>
-
-<?php } ?>
 
 <div class="container"> 
 
@@ -55,7 +52,7 @@ $map_marker = get_stylesheet_directory_uri()."/_/img/map-marker.png";
 				<?php echo $address; ?>
 			</div>
 			
-			<button class="icon-header dropdown-head hidden-xs collapsed" data-toggle="collapse" data-target="#control"><i class="icon fa fa-location-arrow fa-lg"></i> Route finder</button>
+			<button class="icon-header dropdown-head hidden-xs collapsed" data-toggle="collapse" data-target="#control"><i class="icon fa fa-car fa-lg"></i> Route finder</button>
 			<div id="control" class="sidebar-block-inner hidden-xs collapse">
 				
 				<div class="form-group">
@@ -85,7 +82,13 @@ $map_marker = get_stylesheet_directory_uri()."/_/img/map-marker.png";
 		</aside>
 	
 	</div>	
+	
+	<?php if ($location) { ?>
 
+	<?php include (STYLESHEETPATH . '/_/inc/contact/map.php'); ?>
+
+	<?php } ?>
+	
 </div>
 	
 <?php endwhile; ?>

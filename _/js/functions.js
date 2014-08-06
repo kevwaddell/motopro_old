@@ -133,6 +133,11 @@
 	$('.feed-wrap').slimScroll({
         height: '300px'
     });
+    
+    $('#directions-panel').slimScroll({
+        height: '300px',
+       alwaysVisible: true
+    });
     	
 	
 	$(document).ready(function (){
