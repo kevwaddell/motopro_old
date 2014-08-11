@@ -56,7 +56,7 @@ $gallery_imgs = get_field('gallery_imgs');
 
 <?php } else { ?>	
 
-	<?php $post_categories = get_the_category_list(); ?>
+	<?php $post_categories = get_the_category_list(" | "); ?>
 
 	<article <?php post_class(); ?>>
 			
